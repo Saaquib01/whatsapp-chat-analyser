@@ -89,18 +89,6 @@ if uploaded_file is not None:
             st.dataframe(timeline)
 
 
-        # # day wise
-        # st.markdown(f'<h1 style="color: red; text-align: center; font-size: 50px;text-decoration: underline;">DAY  WISE</h1>', unsafe_allow_html=True)
-
-        # col1, col2 = st.columns(2)
-
-        # with col1:
-        #     st.markdown(f'<h1 style="color: skyblue; font-size: 40px;">Top 10 Days</h1>', unsafe_allow_html=True)
-        #     daily_timeline = helper.get_top_5_days(selected_users,df)
-        #     st.dataframe(daily_timeline)
-
-
-
         # finding the busiest people in the group(Group Level)
         if selected_users == 'Overall':
             st.markdown(f'<h1 style="color: red; text-align: center; font-size: 50px;text-decoration: underline;">MOST  BUSY  USERS</h1>', unsafe_allow_html=True)
@@ -132,26 +120,27 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.imshow(df_wc)
             st.pyplot(fig)
-#         with col2:
-#             st.markdown(f'<h1 style="color: skyblue; font-size: 40px;">Top 10 Used Words</h1>', unsafe_allow_html=True)
-#             most_common_words = helper.most_common_words(selected_users, df)
-#             st.dataframe(most_common_words)
+        # with col2:
+        #     st.markdown(f'<h1 style="color: skyblue; font-size: 40px;">Top 10 Used Words</h1>', unsafe_allow_html=True)
+        #     most_common_words = helper.most_common_words(selected_users, df)
+        #     st.dataframe(most_common_words)
 
 
-        # Emoji analysis
-#         st.markdown(f'<h1 style="color: red; text-align: center; font-size: 50px;text-decoration: underline;">EMOJI ANALYSIS</h1>', unsafe_allow_html=True)
+        # # Emoji analysis
+        # st.markdown(f'<h1 style="color: red; text-align: center; font-size: 50px;text-decoration: underline;">EMOJI ANALYSIS</h1>', unsafe_allow_html=True)
 
-#         col1,col2 = st.columns(2)
+        # col1,col2 = st.columns(2)
 
-#         with col1:
-#             st.markdown(f'<h1 style="color: skyblue; font-size: 40px;">Top 5 Emojis Used</h1>', unsafe_allow_html=True)
-#             emoji_df = helper.emoji_helper(selected_users, df)
-#             st.dataframe(emoji_df.head(5))
-#         with col2:
-#             st.markdown(f'<h1 style="color: skyblue; font-size: 40px;">Pie Chart</h1>', unsafe_allow_html=True)
-#             fig, ax = plt.subplots()
-#             ax.pie(emoji_df['Count     '], labels=emoji_df['Emoji     '], autopct='%1.2f%%', startangle=90)
-#             ax.axis('equal')
-#             st.pyplot(fig)
-       
-         st.markdown(f'<h1 style="red: skyblue;text-align: center; font-size: 30px;">More features will be added soon</h1>', unsafe_allow_html=True)
+        # with col1:
+        #     st.markdown(f'<h1 style="color: skyblue; font-size: 40px;">Top 5 Emojis Used</h1>', unsafe_allow_html=True)
+        #     emoji_df = helper.emoji_helper(selected_users, df)
+        #     st.dataframe(emoji_df.head(5))
+        # with col2:
+        #     st.markdown(f'<h1 style="color: skyblue; font-size: 40px;">Pie Chart</h1>', unsafe_allow_html=True)
+        #     fig, ax = plt.subplots()
+        #     ax.pie(emoji_df['Count     '], labels=emoji_df['Emoji     '], autopct='%1.2f%%', startangle=90)
+        #     ax.axis('equal')
+        #     st.pyplot(fig)
+        
+        st.markdown(f'<h1 style="color: red; text-align: center; font-size: 40px;text-decoration: underline;">More features will be added soon</h1>', unsafe_allow_html=True)
+
