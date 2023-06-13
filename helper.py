@@ -82,11 +82,13 @@ def max_active_month(selected_users, df):
 
 
 def most_busy_users(df):
+    df['user'] = df['user'].astype(str)
     x = df['user'].value_counts().head()
-    df = round((df['user'].value_counts()/df.shape[0])*100,
-               2).reset_index().rename(columns={'user': 'Name', 'count': 'Percentage          '})
+    df = round((df['user'].value_counts() / df.shape[0]) * 100, 2).reset_index().rename(
+        columns={'user': 'Name', 'count': 'Percentage'}
+    )
     df = df[~df['Name'].str.startswith('Group')]
-
+    
     return x, df
 
 
