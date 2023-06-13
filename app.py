@@ -153,3 +153,5 @@ if uploaded_file is not None:
 #             ax.pie(emoji_df['Count     '], labels=emoji_df['Emoji     '], autopct='%1.2f%%', startangle=90)
 #             ax.axis('equal')
 #             st.pyplot(fig)
+       
+         st.markdown(f'<h1 style="red: skyblue;text-align: center; font-size: 30px;">More features will be added soon</h1>', unsafe_allow_html=True)
